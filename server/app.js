@@ -6,7 +6,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 
-const routes = require('./route')
+const routes = require('./routes')
 app.use(routes)
 
 app.listen(port, ()=> {

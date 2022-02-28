@@ -1,8 +1,8 @@
 const userRoute = require('express').Router()
-const userController = require('../controllers/UserController')
+const UserController = require('../controllers/UserController')
 
-userRoute.post('/auth/login', userController.login)
-userRoute.post('/auth/register', userController.register)
+userRoute.post('/auth/login', UserController.login)
+userRoute.post('/auth/register', UserController.register)
 
 userRoute.get('/', UserController.getUsers)
 userRoute.get('/information/:id', UserController.findById)
