@@ -1,4 +1,4 @@
-
+const {user} = require('../models')
 
 class UserController {
     static login(req,res,) {
@@ -10,6 +10,15 @@ class UserController {
     }
 
     static getUsers(req, res) {
+        try{
+            let users = await user.findAll()
+
+            res.status(200).json(users)
+
+        } catch(err) {
+            res.status(500).json(err)
+            
+        }
 
     }
 
